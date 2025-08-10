@@ -21,6 +21,7 @@ while True:
         cv2.imwrite(captured_path, frame)
         print("Picture taken and saved as qrCode.png")
         # Decode QR code
+        image = Image.open(captured_path)
         decoded_objects = decode(image)
 
         for obj in decoded_objects:
